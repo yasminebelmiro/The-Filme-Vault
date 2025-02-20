@@ -14,10 +14,12 @@ import {
   Strong,
   LoginContainer,
   Form,
+  Row,
+  Checkbox,
 } from "./style";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
-const Login = () => {
+const SingUp = () => {
   return (
     <Container>
       <Header />
@@ -27,20 +29,26 @@ const Login = () => {
         </Left>
         <Right>
           <Form action="">
-            <Title>Login</Title>
+            <Title>Cadastrar</Title>
             <GoogleButton>
-              Entrar com
-              <FcGoogle size={25} style={{ "margin-left": "10px" }} />
+              Cadastrar com
+              <FcGoogle size={25} style={{ marginLeft: "10px" }} />
             </GoogleButton>
-            <Text>ou entre com email</Text>
+            <Text>ou cadastre com email</Text>
+            <Input type="text" placeholder="Nome completo" />
             <Input type="text" placeholder="Email" />
             <Input type="password" placeholder="Senha" />
-            <Button>Entrar</Button>
-            <Strong>Esqueci minha senha.</Strong>
+            <Button>Cadastrar</Button>
+            <Row>
+              <Checkbox type="checkbox" />
+              <Text>
+                Aceitar os <Strong>termos e condições</Strong>
+              </Text>
+            </Row>
             <Text>
-              Não tem conta?{" "}
-              <Link to={`/singup`}>
-                <Strong>Cadastre-se</Strong>
+              Já tem conta?{" "}
+              <Link to={`/login`}>
+                <Strong>Entrar</Strong>
               </Link>
             </Text>
           </Form>
@@ -50,4 +58,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SingUp;

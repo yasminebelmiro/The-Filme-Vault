@@ -49,7 +49,7 @@ export const Busca = styled.input`
   border: none;
   border-radius: 10px;
   padding-left: 1rem;
-  font-family: "Playfair Display";
+
 
   &:focus {
     outline: none;
